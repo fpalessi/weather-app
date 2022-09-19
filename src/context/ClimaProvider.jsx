@@ -26,17 +26,12 @@ const ClimaProvider = ({ children }) => {
       const { data } = await axios(url);
       const { lat, lon } = data[0];
 
-      const urlClima = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${appId}`;
-      // La siguiente linea nos va a dar error porque data ya existe
-      // Lo que podemos hacer es aplicar destructuring y renombrar una variable
-      // Vamos a extraer data pero la renombramos como clima para evitar colision de nombres
-      // const { data} = await axios(urlClima);
-      // Como requerimos el dato de la consulta previa (la latitud y la altitud)
-      // antes de hacer esta otra, No podremos hacer las consultas de manera sincrona,
-      // por lo que tenemos que bloquear la siguiente linea hasta que no termine la primea
-      const { data: clima } = await axios(urlClima);
-      console.log(clima);
-      setResult(clima);
+      const urlClime = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${appId}`;
+      // Can't use "const {data} = await axios(urlClime)" because data has been already declared
+      // We require lat and lon from previous query, so we use await again so we ensure previous query is done
+      const { data: clime } = await axios(urlClime);
+      console.log(clime);
+      setResult(clime);
     } catch (error) {
       setNoResult("No hemos encontrado nada");
     } finally {

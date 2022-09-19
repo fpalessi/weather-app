@@ -1,9 +1,9 @@
-import React from "react";
 import useClima from "../hooks/useClima";
-const Resultado = () => {
+const Result = () => {
   const { result } = useClima();
+  // Destructuring result
   const { name, main, wind, sys } = result;
-  // Grados Kelvin
+
   const kelvin = 273.15;
   return (
     <div className="container weather">
@@ -29,4 +29,4 @@ const Resultado = () => {
   );
 };
 
-export default Resultado;
+export default Result;

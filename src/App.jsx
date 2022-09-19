@@ -1,4 +1,4 @@
-import AppClima from "./components/AppClima";
+import WeatherApp from "./components/WeatherApp";
 import { ClimaProvider } from "./context/ClimaProvider";
 function App() {
   return (
@@ -6,7 +6,7 @@ function App() {
       <header>
         <h1>What's the Weather like Today? 😎</h1>
       </header>
-      <AppClima />
+      <WeatherApp />
     </ClimaProvider>
   );
 }

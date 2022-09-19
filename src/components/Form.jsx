@@ -1,14 +1,12 @@
-import React from "react";
 import { useState } from "react";
 import useClima from "../hooks/useClima";
-const Formulario = () => {
+const Form = () => {
   const [alert, setAlert] = useState("");
   const { search, searchData, getWeather } = useClima();
   const { city, country } = search;
   const handleSubmit = (e) => {
     e.preventDefault();
     if (Object.values(search).includes("")) {
-      //Si el valor de busqueda (Object.values(--->X<---) incluye string vacio)
       setAlert("Todos los campos son obligatorios");
       return;
     }
@@ -56,4 +54,4 @@ const Formulario = () => {
   );
 };
 
-export default Formulario;
+export default Form;
