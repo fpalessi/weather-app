@@ -1,0 +1,229 @@
+* {
+  font-family: "Quicksand", sans-serif;
+  color: #121813;
+}
+
+body {
+  background-image: url("https://free4kwallpapers.com/uploads/originals/2019/04/19/nice-weather-amp-river-views-wallpaper.jpg");
+  background-size: cover;
+  font-size: 1.5rem;
+  background-color: transparent;
+  background-repeat: no-repeat;
+}
+header {
+  background-color: #212121;
+  padding: 1.5rem;
+  border-bottom: 0.5rem solid #416536;
+}
+header h1 {
+  text-align: center;
+  color: white;
+  font-size: 2.5rem;
+  margin: 0;
+}
+main {
+  max-width: 1200px;
+}
+.two-cols {
+  margin: 4rem;
+  display: grid;
+  gap: 1rem;
+  justify-content: center;
+}
+@media (min-width: 1250px) {
+  .two-cols {
+    grid-template-columns: repeat(2, 1fr);
+    margin: 4rem auto;
+  }
+}
+.container {
+  border-radius: 0.5rem;
+  background-color: white;
+  padding: 4rem;
+  -webkit-box-shadow: 0px 10px 33px -17px rgba(173, 173, 173, 1);
+  -moz-box-shadow: 0px 10px 33px -17px rgba(173, 173, 173, 1);
+  box-shadow: 0px 10px 33px -17px rgba(173, 173, 173, 1);
+  width: 100%;
+}
+form {
+  width: 100%;
+}
+.field {
+  max-width: 400px;
+  margin: 0 auto 1rem auto;
+}
+.field label {
+  display: block;
+}
+.field input,
+.field select {
+  all: unset;
+  border: 1px solid #cbd5e1;
+  width: 100%;
+  border-radius: 1rem;
+  padding: 0.5rem;
+}
+
+input[type="submit"] {
+  background-color: #416536;
+  margin: 2rem auto 0 auto;
+  display: block;
+  padding: 1rem 3rem;
+  color: white;
+  text-transform: uppercase;
+  font-size: 1rem;
+  border: none;
+  width: 100%;
+  transition: background-color 0.3s ease;
+  border: 1px solid;
+  border-radius: 2rem;
+  font-weight: 900;
+}
+@media (min-width: 768px) {
+  input[type="submit"] {
+    max-width: 400px;
+  }
+}
+input[type="submit"]:hover {
+  background-color: #121813;
+  transform: scale(1.05);
+  cursor: pointer;
+}
+
+.loading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+.weather > p:first-of-type {
+  font-size: 2.2rem;
+}
+.weather h2 {
+  text-align: center;
+}
+
+.weather p {
+  text-align: center;
+  margin: 1.5px;
+}
+.weather p span {
+  font-size: 1rem;
+  vertical-align: super;
+}
+.temp_min_max {
+  margin-top: 2rem;
+  display: flex;
+  justify-content: center;
+  gap: 3rem;
+}
+.temp_min_max > p:first-of-type {
+  color: #172f9d;
+}
+.temp_min_max > p {
+  color: #a00800;
+}
+.spinner {
+  margin: 100px auto;
+  width: 40px;
+  height: 40px;
+  position: relative;
+  text-align: center;
+
+  -webkit-animation: sk-rotate 2s infinite linear;
+  animation: sk-rotate 2s infinite linear;
+}
+
+.alert {
+  background-color: #771932;
+  color: white;
+  border: 3px solid black;
+  border-radius: 1rem;
+  padding: 5px;
+}
+.alert:hover {
+  transform: scale(1.03);
+  cursor: no-drop;
+}
+
+.dot1,
+.dot2 {
+  width: 60%;
+  height: 60%;
+  display: inline-block;
+  position: absolute;
+  top: 0;
+  background-color: #0ea5e9;
+  border-radius: 100%;
+
+  -webkit-animation: sk-bounce 2s infinite ease-in-out;
+  animation: sk-bounce 2s infinite ease-in-out;
+}
+
+.dot2 {
+  top: auto;
+  bottom: 0;
+  -webkit-animation-delay: -1s;
+  animation-delay: -1s;
+}
+.spinner {
+  margin: 100px auto;
+  width: 50px;
+  height: 40px;
+  text-align: center;
+  font-size: 10px;
+}
+
+.spinner > div {
+  background-color: #416536;
+  height: 100%;
+  width: 6px;
+  display: inline-block;
+
+  -webkit-animation: sk-stretchdelay 1.2s infinite ease-in-out;
+  animation: sk-stretchdelay 1.2s infinite ease-in-out;
+}
+
+.spinner .rect2 {
+  -webkit-animation-delay: -1.1s;
+  animation-delay: -1.1s;
+}
+
+.spinner .rect3 {
+  -webkit-animation-delay: -1s;
+  animation-delay: -1s;
+}
+
+.spinner .rect4 {
+  -webkit-animation-delay: -0.9s;
+  animation-delay: -0.9s;
+}
+
+.spinner .rect5 {
+  -webkit-animation-delay: -0.8s;
+  animation-delay: -0.8s;
+}
+
+@-webkit-keyframes sk-stretchdelay {
+  0%,
+  40%,
+  100% {
+    -webkit-transform: scaleY(0.4);
+  }
+  20% {
+    -webkit-transform: scaleY(1);
+  }
+}
+
+@keyframes sk-stretchdelay {
+  0%,
+  40%,
+  100% {
+    transform: scaleY(0.4);
+    -webkit-transform: scaleY(0.4);
+  }
+  20% {
+    transform: scaleY(1);
+    -webkit-transform: scaleY(1);
+  }
+}
