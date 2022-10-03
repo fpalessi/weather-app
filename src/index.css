@@ -5,8 +5,8 @@
 
 body {
   background-image: url("https://free4kwallpapers.com/uploads/originals/2019/04/19/nice-weather-amp-river-views-wallpaper.jpg");
-  background-size: cover;
-  font-size: 1.5rem;
+  background-size: auto;
+  font-size: 1.4rem;
   background-color: transparent;
   background-repeat: no-repeat;
 }
@@ -135,14 +135,14 @@ input[type="submit"]:hover {
 }
 
 .alert {
-  background-color: #771932;
+  font-size: 17px;
+  background-color: #af0606;
   color: white;
-  border: 3px solid black;
-  border-radius: 1rem;
-  padding: 5px;
+  border: 2px solid black;
+  padding: 8px;
 }
 .alert:hover {
-  transform: scale(1.03);
+  transform: scale(1.01);
   cursor: no-drop;
 }
 
