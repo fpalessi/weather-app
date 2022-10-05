@@ -1,5 +1,7 @@
 import { useState } from "react";
 import useClima from "../hooks/useClima";
+import "animate.css";
+
 const Form = () => {
   const [alert, setAlert] = useState("");
   const { search, searchData, getWeather } = useClima();
@@ -14,8 +16,10 @@ const Form = () => {
     getWeather(search);
   };
   return (
-    <div className="container">
-      {alert && <p className="alert">{alert}</p>}
+    <div className="container animate__animated animate__bounceInLeft">
+      {alert && (
+        <p className="alert animate__animated animate__fadeIn">{alert}</p>
+      )}
 
       <form onSubmit={handleSubmit}>
         <div className="field">
@@ -30,7 +34,7 @@ const Form = () => {
           />
         </div>
         <div className="field">
-          <label htmlFor="country">Pais</label>
+          <label htmlFor="country">País</label>
           <select
             id="country"
             name="country"

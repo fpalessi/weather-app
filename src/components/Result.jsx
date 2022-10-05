@@ -1,4 +1,6 @@
 import useClima from "../hooks/useClima";
+import "animate.css";
+
 const Result = () => {
   const { result } = useClima();
   // Destructuring result
@@ -6,7 +8,7 @@ const Result = () => {
 
   const kelvin = 273.15;
   return (
-    <div className="container weather">
+    <div className="container weather animate__animated animate__bounceInRight">
       <h2>
         {name}, {sys.country}
       </h2>
