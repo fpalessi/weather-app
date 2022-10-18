@@ -33,7 +33,18 @@ const ClimaProvider = ({ children }) => {
       console.log(clime);
       setResult(clime);
     } catch (error) {
-      setNoResult("No hemos encontrado nada");
+      setNoResult(
+        <p
+          style={{
+            color: "#fff",
+            fontWeight: "600",
+            marginLeft: "20px",
+            marginTop: "100px",
+          }}
+        >
+          Lo sentimos... No hemos encontrado nada
+        </p>
+      );
     } finally {
       setLoading(false);
     }

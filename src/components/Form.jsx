@@ -23,8 +23,10 @@ const Form = () => {
 
       <form onSubmit={handleSubmit}>
         <div className="field">
-          <p>Elige tu ciudad</p>
-          <label htmlFor="city">Ciudad</label>
+          <p style={{ fontWeight: "600" }}>Elige tu ciudad</p>
+          <label htmlFor="city" style={{ fontWeight: "600" }}>
+            Ciudad
+          </label>
           <input
             type="text"
             id="city"
@@ -34,7 +36,9 @@ const Form = () => {
           />
         </div>
         <div className="field">
-          <label htmlFor="country">País</label>
+          <label htmlFor="country" style={{ fontWeight: "600" }}>
+            País
+          </label>
           <select
             id="country"
             name="country"
